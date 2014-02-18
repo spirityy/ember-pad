@@ -1,0 +1,84 @@
+@import "../animate.scss";
+
+.animation1{
+    transition-propety:width,background-color; 
+    transition-duration:.5s,1s;
+}
+.animation1:hover{
+    width:400px; 
+    background-color:red; 
+    transition-duration:.5s,3s;
+}
+
+@keyframes colorchange {
+    0%   { background-color: #00F; /* from: blue */ }
+    25%  { background-color: #F00; /* red        */ }
+    50%  { background-color: #0F0; /* green      */ }
+    75%  { background-color: #F0F; /* purple     */ }
+    100% { background-color: #00F; /* to: blue   */ }
+}
+@-webkit-keyframes colorchange {
+    0%   { background-color: #00F; /* from: blue */ }
+    25%  { background-color: #F00; /* red        */ }
+    50%  { background-color: #0F0; /* green      */ }
+    75%  { background-color: #F0F; /* purple     */ }
+    100% { background-color: #00F; /* to: blue   */ }
+}
+
+.animation2{
+    animation-name: colorchange; /**这里引用了前面定义的动画**/
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: colorchange; /**这里引用了前面定义的动画**/
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+/**简写****/
+// .animation2{
+//    -webkit-animation: colorchange 5s linear 1s infinite alternate;
+//    animation: colorchange 5s linear 1s infinite alternate;
+// }
+
+.animation3{
+    @include transition(.5s);
+    @include translate(0px,0px);
+}
+.animation3:hover{
+    @include transition(.5s);
+    @include translate(50px,0px);
+}
+.animation4{
+    @include transition(.3s);
+    @include rotate(0deg);
+
+}
+.animation4:hover{
+    @include transition(.3s);
+    @include rotate(-40deg);
+}
+.animation5{
+    @include transition(.3s);
+    @include scale(1);
+}
+.animation5:hover{
+    @include transition(.3s);
+    @include scale(1.5);
+}
+.animation6{
+    @include transition(.3s);
+    @include skew(0,0);
+}
+.animation6:hover{
+    @include transition(.3s);
+    @include skew(30deg,0);
+}
+.animation7{
+}
+.animation7:hover{
+}

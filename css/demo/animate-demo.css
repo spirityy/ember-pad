@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.animation1 {
+  transition-propety: width,background-color;
+  transition-duration: .5s,1s; }
+
+.animation1:hover {
+  width: 400px;
+  background-color: red;
+  transition-duration: .5s,3s; }
+
+@keyframes colorchange {
+  0% {
+    background-color: #00F;
+    /* from: blue */ }
+
+  25% {
+    background-color: #F00;
+    /* red        */ }
+
+  50% {
+    background-color: #0F0;
+    /* green      */ }
+
+  75% {
+    background-color: #F0F;
+    /* purple     */ }
+
+  100% {
+    background-color: #00F;
+    /* to: blue   */ } }
+
+@-webkit-keyframes colorchange {
+  0% {
+    background-color: #00F;
+    /* from: blue */ }
+
+  25% {
+    background-color: #F00;
+    /* red        */ }
+
+  50% {
+    background-color: #0F0;
+    /* green      */ }
+
+  75% {
+    background-color: #F0F;
+    /* purple     */ }
+
+  100% {
+    background-color: #00F;
+    /* to: blue   */ } }
+
+.animation2 {
+  animation-name: colorchange;
+  /**这里引用了前面定义的动画**/
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: colorchange;
+  /**这里引用了前面定义的动画**/
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate; }
+
+/**简写****/
+.animation3 {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px); }
+
+.animation3:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(50px, 0px);
+  -ms-transform: translate(50px, 0px);
+  transform: translate(50px, 0px); }
+
+.animation4 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg); }
+
+.animation4:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg); }
+
+.animation5 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.animation5:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5); }
+
+.animation6 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: skew(0, 0);
+  -ms-transform: skewX(0) skewY(0);
+  transform: skew(0, 0); }
+
+.animation6:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: skew(30deg, 0);
+  -ms-transform: skewX(30deg) skewY(0);
+  transform: skew(30deg, 0); }

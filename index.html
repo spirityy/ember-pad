@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="./css/lion.css">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<script type="text/x-handlebars">
+<div class="container">
+            <div class="side-bar">
+                <div class="side-hd">
+                    <a href="#"></a>
+                </div>
+                <div>
+                    <ul class="side-ul">
+                        <li><a href="index.html" class="cur">首页</a></li>
+                        <li> <a href="#">鲜果区</a></li>
+                        <li><a href="index.html">礼品区</a></li>
+                        <li><a href="index.html">人群</a></li>
+                        <li><a href="index.html">场合</a></li>
+                        <li><a href="index.html">品牌</a></li>
+                        <li><a href="index.html">原产地</a></li>
+                        <li><a href="index.html">限时抢购</a></li>
+                    </ul>
+                </div>
+
+            <div class="side-ft">
+                <p>      
+                    {{#link-to 'cert' class="search-icon"}} 
+                       cert 
+                    {{/link-to}}
+                    {{#link-to 'search' class="search-icon"}} 
+                        search
+                    {{/link-to}}
+                </p>
+            </div>
+            </div>
+            <div class="main-wrapper">
+                {{outlet}}
+            </div>
+        </div>
+</script>
+
+<script type="text/x-handlebars" id="index">
+           <div class="nav">
+                 <h3>天天果园<span class="addr-choose">上海<span class="triangle"></span></span></h3>
+            </div>
+ 
+            <div id="slider">
+                <div>
+                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
+                </div>
+                <div>
+                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
+                </div>
+                <div>
+                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
+                </div>
+                <div>
+                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
+                </div>
+            </div>
+
+            <div class="banner-cat">
+                <ul>
+                    <li><a href="#">苹果</a></li>
+                    <li><a href="#">苹果</a></li>
+                    <li><a href="#">苹果</a></li>
+                    <li><a href="#">苹果</a></li>
+                </ul>
+            </div>
+
+            <div class="goods-list">
+
+    <div class="goods-list clearfix">
+            <h3 class="list-hd"><a href="#">礼品推荐</a><a class="more" href="#">&gt;</a></h3>
+            <div class="list-bd">
+                <ul>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                佳沛新西兰金奇异果（S号）
+                                </li>
+                                <li class="pro-price">
+                                &yen;89.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+            </div>
+</script>
+
+
+<script type="text/x-handlebars" id="search">
+    <div class="nav">
+        <h3>搜索</h3>
+    </div>
+</script>
+
+<script type="text/x-handlebars" id="cert">
+    <div class="nav">
+        <h3>购物车</h3>
+    </div>
+</script>
+
+
+
+<script src="./js/libs/jquery-1.9.1.js"></script>
+<script src="./js/libs/handlebars-1.0.0.js"></script>
+<script src="./js/libs/ember.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>
