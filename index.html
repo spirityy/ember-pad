@@ -11,34 +11,42 @@
 <div class="container">
             <div class="side-bar">
                 <div class="side-hd">
-                    <a href="#"></a>
+                        <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
                 </div>
                 <div>
                     <ul class="side-ul">
-                        <li><a href="index.html" class="cur">首页</a></li>
-                        <li> <a href="#">鲜果区</a></li>
-                        <li><a href="index.html">礼品区</a></li>
-                        <li><a href="index.html">人群</a></li>
-                        <li><a href="index.html">场合</a></li>
-                        <li><a href="index.html">品牌</a></li>
-                        <li><a href="index.html">原产地</a></li>
-                        <li><a href="index.html">限时抢购</a></li>
+                        <li><a href="index.html" class="icon1 cur">首页</a></li>
+                        <li><a href="#" class="icon2">鲜果区</a></li>
+                        <li><a href="index.html" class="icon3">礼品区</a></li>
+                        <li><a href="index.html" class="icon4">人群</a></li>
+                        <li><a href="index.html" class="icon5">场合</a></li>
+                        <li><a href="index.html" class="icon6">品牌</a></li>
+                        <li><a href="index.html" class="icon7">原产地</a></li>
+                        <li><a href="index.html" class="icon8">限时抢购</a></li>
                     </ul>
                 </div>
 
             <div class="side-ft">
                 <p>      
-                    {{#link-to 'cert' class="search-icon"}} 
-                       cert 
+                    {{#link-to "cert" class="cert-icon"}} 
+                        <i class="cert-num">1</i>
                     {{/link-to}}
-                    {{#link-to 'search' class="search-icon"}} 
-                        search
+                    {{#link-to "search" class="search-icon"}} 
                     {{/link-to}}
                 </p>
             </div>
             </div>
             <div class="main-wrapper">
                 {{outlet}}
+            </div>
+            <div class="over-wrapper1">
+                {{outlet "overlay1"}} 
+            </div>
+            <div class="over-wrapper2">
+                {{outlet "overlay2"}} 
+            </div>
+            <div class="over-wrapper3">
+                {{outlet "overlay3"}} 
             </div>
         </div>
 </script>
@@ -198,7 +206,6 @@
         <h3>购物车</h3>
     </div>
 </script>
-
 
 
 <script src="./js/libs/jquery-1.9.1.js"></script>

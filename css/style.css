@@ -24,18 +24,65 @@ body {
       line-height: 70px;
       width: 100%;
       color: #fff;
-      padding-left: 30%;
+      padding-left: 35%;
       font-size: 18px; }
+      .side-bar .side-ul a.icon1 {
+        background: url(../img/icons.png) no-repeat 15px 18px; }
+      .side-bar .side-ul a.icon2 {
+        background: url(../img/icons.png) no-repeat 15px -50px; }
+      .side-bar .side-ul a.icon3 {
+        background: url(../img/icons.png) no-repeat 15px -125px; }
+      .side-bar .side-ul a.icon4 {
+        background: url(../img/icons.png) no-repeat 15px -200px; }
+      .side-bar .side-ul a.icon5 {
+        background: url(../img/icons.png) no-repeat 15px -275px; }
+      .side-bar .side-ul a.icon6 {
+        background: url(../img/icons.png) no-repeat 15px -355px; }
+      .side-bar .side-ul a.icon7 {
+        background: url(../img/icons.png) no-repeat 15px -420px; }
+      .side-bar .side-ul a.icon8 {
+        background: url(../img/icons.png) no-repeat 15px -495px; }
       .side-bar .side-ul a.cur {
-        background: rgba(255, 255, 255, 0.3); }
+        background-color: rgba(255, 255, 255, 0.3); }
       .side-bar .side-ul a:hover {
-        background: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.3);
         text-decoration: none; }
+  .side-bar .side-hd img {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #ccc;
+    margin: -20% 0 0 20%; }
   .side-bar .side-ft {
     margin-top: 20px;
     border-top: 2px solid #ccc; }
     .side-bar .side-ft p a {
-      display: inline-block; }
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      margin-left: 20px; }
+    .side-bar .side-ft .cert-icon {
+      position: relative;
+      background: url(../img/icons.png) no-repeat 10px -580px; }
+      .side-bar .side-ft .cert-icon .cert-num {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        line-height: 14px;
+        top: 10px;
+        right: 5px;
+        font-style: normal;
+        font-size: 8px;
+        -webkit-text-size-adjust: none;
+        background: red;
+        color: #fff;
+        text-align: center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+    .side-bar .side-ft .search-icon {
+      background: url(../img/icons.png) no-repeat 10px -645px; }
 
 .main-wrapper {
   position: absolute;

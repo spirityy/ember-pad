@@ -28,33 +28,85 @@ body{
             line-height:70px;
             width:100%;
             color:#fff;
-            padding-left:30%;
+            padding-left:35%;
             font-size:18px;
+            &.icon1{
+                background:url(../img/icons.png) no-repeat 15px 18px; 
+            }
+            &.icon2{
+                background:url(../img/icons.png) no-repeat 15px -50px; 
+            }
+            &.icon3{
+                background:url(../img/icons.png) no-repeat 15px -125px; 
+            }
+            &.icon4{
+                background:url(../img/icons.png) no-repeat 15px -200px; 
+            }
+            &.icon5{
+                background:url(../img/icons.png) no-repeat 15px -275px; 
+            }
+            &.icon6{
+                background:url(../img/icons.png) no-repeat 15px -355px; 
+            }
+            &.icon7{
+                background:url(../img/icons.png) no-repeat 15px -420px; 
+            }
+            &.icon8{
+                background:url(../img/icons.png) no-repeat 15px -495px; 
+            }
             &.cur{
-                background:rgba(255,255,255,.3); 
+                background-color:rgba(255,255,255,.3); 
             }
             &:hover{
-                background:rgba(255,255,255,.3); 
+                background-color:rgba(255,255,255,.3); 
                 text-decoration:none; 
             }
         }
     }
     .side-hd{
-    
+        img{
+            width:80px; 
+            height:80px; 
+            border:3px solid #ccc;
+            margin:-20% 0 0 20%;
+        }    
     }
     .side-ft{
         margin-top:20px;
         border-top:2px solid #ccc; 
         p a{
             display:inline-block; 
-            
-
+            height:50px;
+            width:50px;
+            margin-left:20px;
             &.cert-icon{
 
             }
             &.search-icon{
             
             }
+        }
+        .cert-icon{
+                position:relative;
+                background:url(../img/icons.png) no-repeat 10px -580px; 
+                .cert-num{
+                    position:absolute; 
+                    width:12px;
+                    height:12px;
+                    line-height:14px;
+                    top:10px;
+                    right:5px;
+                    font-style:normal;
+                    font-size:8px;
+                    -webkit-text-size-adjust:none;
+                    background:red;
+                    color:#fff;
+                    text-align:center;
+                    @include border-radius(50%);
+                }
+        }
+        .search-icon{
+                background:url(../img/icons.png) no-repeat 10px -645px; 
         }
     }
 }
@@ -225,4 +277,3 @@ body{
         }
     }
 }
-
