@@ -37,9 +37,9 @@ body {
       .side-bar .side-ul a.icon5 {
         background: url(../img/icons.png) no-repeat 15px -275px; }
       .side-bar .side-ul a.icon6 {
-        background: url(../img/icons.png) no-repeat 15px -355px; }
+        background: url(../img/icons.png) no-repeat 15px -350px; }
       .side-bar .side-ul a.icon7 {
-        background: url(../img/icons.png) no-repeat 15px -420px; }
+        background: url(../img/icons.png) no-repeat 15px -422px; }
       .side-bar .side-ul a.icon8 {
         background: url(../img/icons.png) no-repeat 15px -495px; }
       .side-bar .side-ul a.cur {
@@ -51,7 +51,7 @@ body {
     width: 80px;
     height: 80px;
     border: 3px solid #ccc;
-    margin: -20% 0 0 20%; }
+    margin: -30px 0 0 50px; }
   .side-bar .side-ft {
     margin-top: 20px;
     border-top: 2px solid #ccc; }
@@ -135,7 +135,6 @@ body {
           border-left: 4px solid transparent;
           content: ""; }
   .main-wrapper #slider {
-    margin-top: 50px;
     width: 100%;
     height: 186px;
     overflow: hidden; }
@@ -247,3 +246,22 @@ body {
         .goods-list ul li .pro-mod .pro-price {
           color: #269336;
           padding-bottom: 5px; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  z-index: 200;
+  width: 100%; }
+
+.go-deep {
+  -webkit-transform: translate(20%, 0);
+  -ms-transform: translate(20%, 0);
+  transform: translate(20%, 0); }

@@ -15,14 +15,30 @@
                 </div>
                 <div>
                     <ul class="side-ul">
-                        <li><a href="index.html" class="icon1 cur">首页</a></li>
-                        <li><a href="#" class="icon2">鲜果区</a></li>
-                        <li><a href="index.html" class="icon3">礼品区</a></li>
-                        <li><a href="index.html" class="icon4">人群</a></li>
-                        <li><a href="index.html" class="icon5">场合</a></li>
-                        <li><a href="index.html" class="icon6">品牌</a></li>
-                        <li><a href="index.html" class="icon7">原产地</a></li>
-                        <li><a href="index.html" class="icon8">限时抢购</a></li>
+                        <li>
+                            {{#link-to "index" class="icon1 cur"}}首页{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 1 class="icon2"}}鲜果区{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 2 class="icon3"}}礼品区{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 3 class="icon4"}}人群{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 4 class="icon5"}}场合{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 5 class="icon6"}}品牌{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 6 class="icon7"}}原产地{{/link-to}}
+                        </li>
+                        <li>
+                            {{#link-to "category" 7 class="icon8"}}限时抢购{{/link-to}}
+                        </li>
                     </ul>
                 </div>
 
@@ -37,16 +53,16 @@
             </div>
             </div>
             <div class="main-wrapper">
-                {{outlet}}
+                {{outlet main}}
             </div>
-            <div class="over-wrapper1">
-                {{outlet "overlay1"}} 
+            <div class="overlay category main-wrapper">
+                {{outlet category}} 
             </div>
-            <div class="over-wrapper2">
-                {{outlet "overlay2"}} 
+            <div class="overlay list">
+                {{outlet list}} 
             </div>
-            <div class="over-wrapper3">
-                {{outlet "overlay3"}} 
+            <div class="overlay detail">
+                {{outlet detail}} 
             </div>
         </div>
 </script>
@@ -86,108 +102,25 @@
             <h3 class="list-hd"><a href="#">礼品推荐</a><a class="more" href="#">&gt;</a></h3>
             <div class="list-bd">
                 <ul>
+                    {{#each model}}
                     <li>
                     <div class="pro-mod">
                         <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
+                            <img {{bind-attr src=img_src}} alt="">
                         </div>
                         <div class="pro-dec">
                             <ul>
                                 <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
+                                    {{title}}
                                 </li>
                                 <li class="pro-price">
-                                &yen;89.0
+                                &yen;{{price}}
                                 </li>
                             </ul>
                         </div>
                     </div>
                     </li>
-                    <li>
-                    <div class="pro-mod">
-                        <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
-                        </div>
-                        <div class="pro-dec">
-                            <ul>
-                                <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
-                                </li>
-                                <li class="pro-price">
-                                &yen;89.0
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="pro-mod">
-                        <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
-                        </div>
-                        <div class="pro-dec">
-                            <ul>
-                                <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
-                                </li>
-                                <li class="pro-price">
-                                &yen;89.0
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="pro-mod">
-                        <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
-                        </div>
-                        <div class="pro-dec">
-                            <ul>
-                                <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
-                                </li>
-                                <li class="pro-price">
-                                &yen;89.0
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="pro-mod">
-                        <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
-                        </div>
-                        <div class="pro-dec">
-                            <ul>
-                                <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
-                                </li>
-                                <li class="pro-price">
-                                &yen;89.0
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="pro-mod">
-                        <div class="pro-img">
-                            <img src="http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg" alt="">
-                        </div>
-                        <div class="pro-dec">
-                            <ul>
-                                <li class="pro-name">
-                                佳沛新西兰金奇异果（S号）
-                                </li>
-                                <li class="pro-price">
-                                &yen;89.0
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </li>
+                    {{/each}}
                 </ul> 
             </div>
         </div>
@@ -199,6 +132,14 @@
     <div class="nav">
         <h3>搜索</h3>
     </div>
+    <div class="search-form">
+        jkdjsalkdkajkldjkajdlsajd
+        jkdsjaljdklajkdjsakld
+        dskajdljakdjklsajkdljsaodsadjlkasdoa
+        dadjkasdjklsajkdljaklsdjklajdklsjadoad
+        djsalkjdksjakdjkasljdkjakdjad
+        dksjakdjskaljdklasjkldjaskljdkal
+    </div>
 </script>
 
 <script type="text/x-handlebars" id="cert">
@@ -207,10 +148,25 @@
     </div>
 </script>
 
+<script type="text/x-handlebars" id="category">
+    <div class="nav">
+        {{value}}
+    </div>
+</script>
+
+<script type="text/x-handlebars" id="list">
+    djskajdjakld
+</script>
+
+<script type="text/x-handlebars" id="detail">
+    djskajdjakld
+</script>
+
 
 <script src="./js/libs/jquery-1.9.1.js"></script>
 <script src="./js/libs/handlebars-1.0.0.js"></script>
 <script src="./js/libs/ember.js"></script>
+<script src="./js/data.js"></script>
 <script src="./js/app.js"></script>
 
 </body>

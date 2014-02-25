@@ -1,4 +1,5 @@
 @import "functions.scss";
+@import "animate.scss";
 
 $base_color:#209E35;
 
@@ -46,10 +47,10 @@ body{
                 background:url(../img/icons.png) no-repeat 15px -275px; 
             }
             &.icon6{
-                background:url(../img/icons.png) no-repeat 15px -355px; 
+                background:url(../img/icons.png) no-repeat 15px -350px; 
             }
             &.icon7{
-                background:url(../img/icons.png) no-repeat 15px -420px; 
+                background:url(../img/icons.png) no-repeat 15px -422px; 
             }
             &.icon8{
                 background:url(../img/icons.png) no-repeat 15px -495px; 
@@ -68,7 +69,7 @@ body{
             width:80px; 
             height:80px; 
             border:3px solid #ccc;
-            margin:-20% 0 0 20%;
+            margin:-30px 0 0 50px;
         }    
     }
     .side-ft{
@@ -158,7 +159,6 @@ body{
         }
     }
     #slider{
-        margin-top:50px;
         width:100%;
         height:186px;
         overflow:hidden;
@@ -277,3 +277,19 @@ body{
         }
     }
 }
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    @include transition(.2s);
+    @include translate(100%,0);
+    z-index:200;
+    width:100%;
+}
+.go-deep{
+    @include translate(20%,0);
+}
+
+
