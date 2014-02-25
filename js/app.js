@@ -8,17 +8,28 @@ App.Router.map(function() {
     this.resource('category',{path:'category/:id'},function(){
         this.route('category',{path:'/:id'}); 
     }); 
+
     this.resource('list',{path:'/:id'});
+
     this.resource('detail',{path:'/:id'});
 });
 
-
+//index
 App.IndexRoute  = Ember.Route.extend({
     model:function(){
         return indexlist; 
-    },
-
+    }
 });
+
+
+//cert
+App.CertRoute  = Ember.Route.extend({
+    model:function(){
+        return certlist; 
+    }
+});
+
+
 
 App.CategoryRoute = Ember.Route.extend({
     model:function(params){

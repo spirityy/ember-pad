@@ -111,7 +111,6 @@ body{
         }
     }
 }
-
 .main-wrapper{
     position:absolute;
     z-index:200;
@@ -124,10 +123,10 @@ body{
     height:1000px;
     .nav{
         width:80%;
+        height:50px;
         position:fixed;
         z-index:99;
         text-align:center;
-        height:50px;
         line-height:50px;
         font-size:18px;
         color:#666;
@@ -158,6 +157,17 @@ body{
             }
         }
     }
+    .nav-place{
+        width:80%;
+        height:55px;
+    }
+    .loading{
+        position:fixed;
+        z-index:98;
+        width:80%;
+        height:100px; 
+        background:url(../img/loading.gif) no-repeat center bottom;
+    }
     #slider{
         width:100%;
         height:186px;
@@ -172,6 +182,8 @@ body{
     line-height:50px;
     @include box-shadow(0px 0px 8px #aaa);
     ul{
+        /*模拟*/
+        width:360px;
         @include clearfix();
         height:50px;
         line-height:50px;
@@ -277,6 +289,137 @@ body{
         }
     }
 }
+.search-form{
+    width:90%;
+    margin:30px auto;
+    input[type="text"],button{
+        display:inline-block;
+        vertical-align:middle;
+        height:60px; 
+        line-height:60px;
+        margin:0;
+    }
+    input[type="text"]{
+        padding:10px 50px;
+        width:600px;
+        font-size:20px;
+        line-height:20px;
+        height:38px;
+        border:1px solid #ccc;
+    }
+    button{
+        color:#fff;
+        background:#259335;
+        font-size:20px;
+        width:120px;
+        border:none;
+    }
+}
+.cert-list{
+    li{
+        @include clearfix();
+        height:160px;
+        border-bottom:1px solid #ccc;
+        @include linear-gradient(rgba(255,255,255,.5),rgba(216,216,216,.5));
+        .list-item{
+        @include clearfix();
+        margin:0;
+        height:160px;
+        .item-img{
+            margin:5px 15px 0 15px;
+            float:left;
+            img{
+                width:145px;
+                height:145px;
+            } 
+        }    
+        .item-dec{
+            width:380px;
+            float:left;
+            margin-right:30px;
+            color:#676767;
+            h5{
+                margin:15px 0 0 0; 
+                font-size:18px;
+            } 
+            p{
+                font-size:14px;
+            }
+        }
+        .item-addremove{
+            float:left;
+            margin-right:10px;
+            .act-add,.act-remove{
+                border:none;
+                display:block;
+                background:#259335;
+                color:#fff;
+                font-size:60px;
+                width:80px; 
+                height:80px;
+                line-height:80px;
+                border-bottom:1px solid #fff;
+                text-align:center;
+            } 
+        }
+        .endprice{
+            float:left;
+            font-size:22px;
+            width:170px;
+            height:160px;
+            line-height:160px;
+            color:#656565;
+            text-align:center;
+            span{
+                margin:0 15px; 
+                &.g-hl{
+                    color:#259335;
+                }
+            }
+        }
+
+    }
+}
+}
+.main-action{
+    @include clearfix();
+   position:fixed;
+   z-index:98;
+   width:80%;
+   bottom:0;
+   height:60px;
+   background:#fff;
+   border-top:1px solid #ccc;
+   padding:0 10px;
+   .total-price{
+       color:#259335;
+       margin-left:10px;
+       float:left;
+        line-height:60px;
+        font-size:34px; 
+        font-weight:bold;
+   }
+   .go-pay{
+       margin-right:20px;
+       float:right;
+       button{
+           @include border-radius(5px);
+           @include box-shadow(5px);
+           border:none;
+           background:#259335;
+           font-size:25px;
+           height:48px;
+           line-height:48px;
+           vertical-align:middle;
+           margin-top:6px;
+           color:#fff;
+           width:216px;
+           text-align:center;
+       }
+   }
+}
+
+
 .overlay{
     position:fixed;
     top:0;
@@ -291,5 +434,3 @@ body{
 .go-deep{
     @include translate(20%,0);
 }
-
-

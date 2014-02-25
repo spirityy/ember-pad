@@ -29,7 +29,6 @@ var categorylist = [
     },
 ];
 
-
 var indexlist  = [
     {
         id:'0001',
@@ -48,5 +47,37 @@ var indexlist  = [
         img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
         title:'香蕉dsada',
         price:'98'
+    }
+];
+
+var certlist = [
+    {
+        order_id:'',
+        good_id:'',
+        good_title:'1111111111111111111',
+        good_img_src:'http://cdn.ifanr.cn/wp-content/uploads/ta-thumbnails-cache/220x130-c/2014/2/402590-1.jpg',
+        good_dec:'dkjsajdlkajdlkajdjaljdlajsldkjakl',
+        good_price:'191',
+        good_num:'2'
+
+    },
+    {
+        order_id:'',
+        good_id:'',
+        good_title:'22222222222222',
+        good_img_src:'http://cdn.ifanr.cn/wp-content/uploads/ta-thumbnails-cache/220x130-c/2014/2/402590-1.jpg',
+        good_dec:'dkjsajdlkajdlkajdjaljdlajsldkjakl',
+        good_price:'192',
+        good_num:'2'
+
+    },
+    {
+        order_id:'',
+        good_id:'',
+        good_title:'dsadasdad',
+        good_img_src:'http://cdn.ifanr.cn/wp-content/uploads/ta-thumbnails-cache/220x130-c/2014/2/402590-1.jpg',
+        good_dec:'dkjsajdlkajdlkajdjaljdlajsldkjakl',
+        good_price:'192',
+        good_num:'3'
     }
 ];

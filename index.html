@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>天天果园</title>
 <link rel="stylesheet" href="./css/lion.css">
 <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -71,7 +71,10 @@
            <div class="nav">
                  <h3>天天果园<span class="addr-choose">上海<span class="triangle"></span></span></h3>
             </div>
- 
+            <div class="loading">
+            </div>
+            <div class="nav-place">
+            </div>
             <div id="slider">
                 <div>
                     <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
@@ -132,13 +135,10 @@
     <div class="nav">
         <h3>搜索</h3>
     </div>
+    <div class="nav-place"></div>
     <div class="search-form">
-        jkdjsalkdkajkldjkajdlsajd
-        jkdsjaljdklajkdjsakld
-        dskajdljakdjklsajkdljsaodsadjlkasdoa
-        dadjkasdjklsajkdljaklsdjklajdklsjadoad
-        djsalkjdksjakdjkasljdkjakdjad
-        dksjakdjskaljdklasjkldjaskljdkal
+            <input type="text" placeholder="在这里搜索" >
+            <button>搜索</button>
     </div>
 </script>
 
@@ -146,12 +146,47 @@
     <div class="nav">
         <h3>购物车</h3>
     </div>
+    <div class="nav-place"></div>
+    <div class="cert-list">
+        <ul>
+            {{#each model}}
+            <li>
+                <div class="list-item">
+                    <div class="item-img">
+                        <img {{ bind-attr src=good_img_src}} alt="">
+                    </div>
+                    <div class="item-dec">
+                        <h5>{{good_title}}</h5>
+                        <p>{{good_dec}}</p>
+                    </div>
+                    <div class="item-addremove">
+                        <button class="act-add">+</button> 
+                        <button class="act-remove">-</button>
+                    </div>
+                    <div class="endprice">
+                        <span class="num">{{good_num}}</span>X<span class="g-hl">&yen;{{good_price}}</span>
+                    </div>
+                </div>
+
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="main-action">
+        <div class="total-price">
+            &yen;1030
+        </div>
+        <div class="go-pay">
+            <button>结算</button>
+        </div>
+    </div>
 </script>
 
 <script type="text/x-handlebars" id="category">
     <div class="nav">
         {{value}}
     </div>
+    <div class="nav-place"></div>
 </script>
 
 <script type="text/x-handlebars" id="list">
