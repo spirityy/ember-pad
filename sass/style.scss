@@ -159,7 +159,7 @@ body{
     }
     .nav-place{
         width:80%;
-        height:55px;
+        height:53px;
     }
     .loading{
         position:fixed;
@@ -419,6 +419,40 @@ body{
    }
 }
 
+.cate-banner{
+    img{
+        width:80%;    
+        height:187px;
+    }
+}
+.cate-list{
+    ul{
+        @include clearfix();
+        li{
+            float:left;
+            width:40%;
+            height:70px;
+           a{
+                color:#676767;
+                display:inline-block; 
+                width:100%;
+                height:70px;
+                line-height:70px;
+                font-size:18px;
+                font-weight:bold;
+                text-align:center;
+                text-decoration:none;
+                @include linear-gradient(rgba(255,255,255,.5),rgba(216,216,216,.5));
+           }
+           span{
+                float:right;   
+                margin-right:20px;
+           }
+        } 
+    } 
+}
+
+
 
 .overlay{
     position:fixed;
@@ -432,5 +466,8 @@ body{
     width:100%;
 }
 .go-deep{
+    @include translate(20%,0);
+}
+.go-middle{
     @include translate(20%,0);
 }

@@ -5,13 +5,10 @@ App.Router.map(function() {
     this.route('search',{path:'/search'});
     this.route('cert',{path:'/cert'});
 
-    this.resource('category',{path:'category/:id'},function(){
-        this.route('category',{path:'/:id'}); 
-    }); 
+    this.resource('category',{path:'category/:id'}); 
+    this.resource('list',{path:'list/:id'}); 
 
-    this.resource('list',{path:'/:id'});
-
-    this.resource('detail',{path:'/:id'});
+    this.resource('detail',{path:'detail/:id'});
 });
 
 //index
@@ -30,7 +27,6 @@ App.CertRoute  = Ember.Route.extend({
 });
 
 
-
 App.CategoryRoute = Ember.Route.extend({
     model:function(params){
         return categorylist.findBy('id',params.id); 
@@ -46,18 +42,41 @@ App.CategoryRoute = Ember.Route.extend({
     }
 });
 
-App.CategoryView = Ember.View.extend({
-
-});
-
 App.ListRoute = Ember.Route.extend({
+    model:function(params){
+        return []; 
+    },
     renderTemplate:function(){
-        this.render({outlet:'list'});    
+        this.render('list',{ outlet:'list' }); 
+    },
+    deactivate:function(){
+        $('.list').removeClass('go-middle');
+    },
+    activate:function(){
+        $('.list').addClass('go-middle');
     }
 });
 
 App.DetailRoute = Ember.Route.extend({
+    model:function(params){
+        return  []; 
+    },
     renderTemplate:function(){
-        this.render({outlet:'detail'});    
+        this.render('detail',{ outlet:'detail' }); 
+    },
+    deactivate:function(){
+        $('.detial').removeClass('go-low');
     }
+});
+
+
+App.ListView = Ember.View.extend({
+  didInsertElement: function() {
+      $('.list').addClass('go-middle');
+  }
+});
+App.CategoryView = Ember.View.extend({
+  didInsertElement: function() {
+      $('.category').addClass('go-deep');
+  }
 });

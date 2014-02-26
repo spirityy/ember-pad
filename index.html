@@ -58,10 +58,10 @@
             <div class="overlay category main-wrapper">
                 {{outlet category}} 
             </div>
-            <div class="overlay list">
+            <div class="overlay list main-wrapper">
                 {{outlet list}} 
             </div>
-            <div class="overlay detail">
+            <div class="overlay detail main-wrapper">
                 {{outlet detail}} 
             </div>
         </div>
@@ -184,13 +184,33 @@
 
 <script type="text/x-handlebars" id="category">
     <div class="nav">
-        {{value}}
+        {{title}}
     </div>
     <div class="nav-place"></div>
+    <div class="cate-banner">
+        <a href="javascript:void(0);">
+            <img src="http://cdn.ifanr.cn/wp-content/uploads/2014/02/nexusae0_image_thumb35.png" alt="">
+        </a>
+    </div>
+    <div class="cate-list">
+        <ul>
+            {{#each model.value}}
+            <li>
+                {{#link-to "list" list_id}}
+                    {{name}}<span>&gt;</span>
+                {{/link-to}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </script>
 
 <script type="text/x-handlebars" id="list">
-    djskajdjakld
+    <div class="nav">
+       dlksajdljalkd 
+    </div>
+    <div class="nav-blank"></div>
+    djsaldjlajdkl
 </script>
 
 <script type="text/x-handlebars" id="detail">

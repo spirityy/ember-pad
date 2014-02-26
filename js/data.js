@@ -1,32 +1,65 @@
 var categorylist = [
     {
         id:'1',
-        value:'鲜果区'
+        title:'鲜果区',
+        value:[
+            {
+                list_id:'1',
+                name:'11111111'
+            },   
+            {
+                list_id:'2',
+                name:'222222'
+            },    
+            {
+                list_id:'3',
+                name:'33333333333'
+            }
+        ]
     },
     {
         id:'2',
-        value:'礼品区'
+        title:'礼品区',
+        value:[
+            {
+                list_id:'4',
+                name:'444444444'
+            },   
+            {
+                list_id:'5',
+                name:'5555555555'
+            },    
+            {
+                list_id:'6',
+                name:'6666666666666'
+            }
+        ]
     },
     {
         id:'3',
-        value:'人群'
+        title:'人群',
+        value:[]
     },
     {
         id:'4',
-        value:'场合'
+        title:'场合',
+        value:[]
     },
     {
         id:'5',
-        value:'品牌'
+        title:'品牌',
+        value:[]
     },
     {
         id:'6',
-        value:'原产地'
+        title:'原产地',
+        value:[]
     },
     {
         id:'7',
-        value:'限时抢购'
-    },
+        title:'限时抢购',
+        value:[]
+    }
 ];
 
 var indexlist  = [
