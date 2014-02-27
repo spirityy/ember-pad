@@ -5,15 +5,15 @@ var categorylist = [
         value:[
             {
                 list_id:'1',
-                name:'11111111'
+                name:'苹果'
             },   
             {
                 list_id:'2',
-                name:'222222'
+                name:'香蕉'
             },    
             {
                 list_id:'3',
-                name:'33333333333'
+                name:'梨子'
             }
         ]
     },
@@ -64,24 +64,71 @@ var categorylist = [
 
 var indexlist  = [
     {
-        id:'0001',
+        pro_id:'0001',
         img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
         title:'佳沛新西兰金奇异果（S号）',
         price:'89'
     },
     {
-        id:'0002',
+        pro_id:'0001',
         img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
         title:'佳沛新西兰金奇异果（L号）',
         price:'90'
     },
     {
-        id:'0003',
+        pro_id:'0001',
         img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
         title:'香蕉dsada',
         price:'98'
     }
 ];
+
+var listitems = [
+    {
+        pro_id:'0001',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'西兰金奇异果（1号）',
+        price:'89'
+    },
+    {
+        pro_id:'0002',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'西兰金奇异果（2号）',
+        price:'89'
+    },
+    {
+        pro_id:'0003',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'兰金奇异果（3号）',
+        price:'89'
+    },
+    {
+        pro_id:'0004',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'兰金奇异果（4号）',
+        price:'8913'
+    },
+    {
+        pro_id:'0005',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'兰金奇异果（5号）',
+        price:'89'
+    },
+    {
+        pro_id:'0006',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'兰金奇异果（6号）',
+        price:'89'
+    },
+    {
+        pro_id:'0007',
+        img_src:'http://static.fruitday.com/product_pic/2233/1/1-180x180-2233.jpg',
+        title:'西兰金奇异果（7号）',
+        price:'89'
+    }
+];
+
+
 
 var certlist = [
     {

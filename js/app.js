@@ -44,7 +44,7 @@ App.CategoryRoute = Ember.Route.extend({
 
 App.ListRoute = Ember.Route.extend({
     model:function(params){
-        return []; 
+        return listitems; 
     },
     renderTemplate:function(){
         this.render('list',{ outlet:'list' }); 
