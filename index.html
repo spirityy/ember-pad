@@ -99,13 +99,13 @@
                 </ul>
             </div>
 
-            <div class="goods-list">
 
-    <div class="goods-list clearfix">
+        <div class="goods-list clearfix">
             <h3 class="list-hd"><a href="#">礼品推荐</a><a class="more" href="#">&gt;</a></h3>
             <div class="list-bd">
                 <ul>
                     {{#each model}}
+                    <a href="javascript:void(0);"> 
                     <li>
                     <div class="pro-mod">
                         <div class="pro-img">
@@ -123,11 +123,11 @@
                         </div>
                     </div>
                     </li>
+                    </a>
                     {{/each}}
                 </ul> 
             </div>
         </div>
-            </div>
 </script>
 
 
@@ -207,10 +207,41 @@
 
 <script type="text/x-handlebars" id="list">
     <div class="nav">
-       dlksajdljalkd 
+        <ul>
+            <li><a href="javascript:void(0);">综合</a></li>
+            <li class="cur"><a href="javascript:void(0);">浏览量</a></li>
+            <li><a href="javascript:void(0);">销量</a></li>
+            <li><a href="javascript:void(0);">价格</a></li>
+        </ul>
     </div>
-    <div class="nav-blank"></div>
-    djsaldjlajdkl
+    <div class="nav-place"></div>
+
+    <div class="list-wrapper goods-list">
+         <ul>
+         {{#each}}
+         <a href="javascript:void(0);">
+         <li>
+                <div class="pro-mod">
+                    <div class="pro-img">
+                        <img {{bind-attr src=img_src}} alt="">
+                    </div>
+                    <div class="pro-dec">
+                        <ul>
+                            <li class="pro-name">
+                                {{title}}
+                            </li>
+                            <li class="pro-price">
+                            &yen;{{price}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            </a>
+            {{/each}}
+
+        </ul> 
+    </div>
 </script>
 
 <script type="text/x-handlebars" id="detail">
