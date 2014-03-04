@@ -69,6 +69,7 @@
         </div>
 </script>
 
+<!----------首页-------------->
 <script type="text/x-handlebars" id="index">
            <div class="nav">
                  <h3>天天果园<span class="addr-choose">上海<span class="triangle"></span></span></h3>
@@ -133,6 +134,7 @@
 </script>
 
 
+<!----------搜索页-------------->
 <script type="text/x-handlebars" id="search">
     <div class="nav">
         <h3>搜索</h3>
@@ -144,6 +146,7 @@
     </div>
 </script>
 
+<!----------购物车页-------------->
 <script type="text/x-handlebars" id="cert">
     <div class="nav">
         <h3>购物车</h3>
@@ -184,6 +187,7 @@
     </div>
 </script>
 
+<!----------分类页-------------->
 <script type="text/x-handlebars" id="category">
     <div class="nav">
         {{title}}
@@ -207,6 +211,7 @@
     </div>
 </script>
 
+<!----------列表页-------------->
 <script type="text/x-handlebars" id="list">
     <div class="nav">
         <ul class="filter">
@@ -245,6 +250,7 @@
     </div>
 </script>
 
+<!----------详情页-------------->
 <script type="text/x-handlebars" id="product">
     <div class="nav">樱桃</div> 
     <div class="nav-place"></div>
@@ -302,6 +308,7 @@
 </script>
 
 
+<!----------个人中心-------------->
 <script type="text/x-handlebars" id="user">
     <div class="nav">个人中心</div>
     <div class="nav-place"></div>
@@ -322,24 +329,67 @@
 <script type="text/x-handlebars" id="user/info">
     <div class="user-main info">
         <ul>
-            <li></li>
-            <li>用户名</li>
-            <li>手机</li>
-            <li>地址</li>
+            <li>
+                <div class="user-detail">
+                    <div class="user-img">
+                        <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
+                    </div>
+                    <div class="user-name">
+                        <p>lp6331619</p>
+                        <p>积分: <span class="red-hl">10</span>分</p>
+                    </div>
+                </div>
+            </li>
+            <li>用户名 :</li>
+            <li>手机 :<span class="val">1321321313</span></li>
+            <li>地址 :<span class="val">上海闵行*****</span></li>
         </ul>
     </div>
 </script>
 <script type="text/x-handlebars" id="user/order">
     <div class="user-main order">
-    222
+        <ul class="order-list">
+            <li class="order-item">
+                    <div class="order-img">
+                        <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
+                    </div>
+                    <div class="order-detail">
+                        <ul>
+                            <li>卷卷舒适办公抱枕套餐</li>
+                            <li><span class="price">&yen;49</span></li>
+                            <li><span class="num">共一件</span></li>
+                        </ul>
+                    </div>
+                    <a href="" class="more">&gt;</a>
+            </li>
+            <li class="order-item">
+                    <div class="order-img">
+                        <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
+                    </div>
+                    <div class="order-detail">
+                        <ul>
+                            <li>卷卷舒适办公抱枕套餐</li>
+                            <li><span class="price">&yen;49</span></li>
+                            <li><span class="num">共一件</span></li>
+                        </ul>
+                    </div>
+                    <a href="" class="more">&gt;</a>
+            </li>
+        </ul>
     </div>
 </script>
 <script type="text/x-handlebars" id="user/addr">
     <div class="user-main addr">
-    333
+       <h5>您的收货地址<a href="" class="addaddr">+</a></h5>
+       <ul>
+           <li>
+                <div>江南 139427719237</div>
+                <div>上海市闵行区姓宋路3128号123室内</div>
+                <a href="" class="editaddr"></a>
+           </li>
+       </ul>
     </div>
 </script>
-
 
 
 <script src="./js/libs/jquery-1.9.1.js"></script>

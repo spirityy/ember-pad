@@ -1,8 +1,6 @@
 @import "functions.scss";
 @import "animate.scss";
 
-$base_color:#209E35;
-
 body{
     background:url('../img/bg.jpg') repeat;
 }
@@ -65,7 +63,7 @@ body{
     .side-hd{
         img{
             width:80px; 
-            height:80px; 
+            height:80px;
             border:3px solid #ccc;
             margin:-30px 0 0 20px;
         }    
@@ -303,6 +301,8 @@ body{
         line-height:20px;
         height:38px;
         border:1px solid #ccc;
+        @include border-radius(0);
+        /*pad -webkit-appearance: caret; */
     }
     button{
         color:#fff;
@@ -605,6 +605,7 @@ body{
 
 .user-center{
     @include clearfix();
+    background:#dedede;
     .user-side{
         min-height:750px;
         float:left;
@@ -639,8 +640,130 @@ body{
             margin:10px; 
             background:#fff;
             border:1px solid #ddd;
+            @include box-shadow(0px 0px 6px #ccc);
             padding:10px;
-            width:520px;
+            width:545px;
+            &.info{
+                ul{
+                    margin:0 auto;
+                    li{
+                        color:#656565;
+                        width:100%; 
+                        border-top:1px solid #ddd;
+                        line-height:44px;
+                        font-size:16px;
+                        &:first-child{
+                            border-top:none;
+                        }
+                        .val{
+                            margin-left:10px; 
+                        }
+                    } 
+                } 
+                .user-detail{
+                    @include clearfix();
+                    .user-name{
+                        margin-left:20px;
+                        float:left;
+                    }
+                    .user-img{
+                        margin:10px 0;
+                        float:left;
+                        img{
+                            border:3px solid #ccc;
+                            @include border-radius(3px);
+                            width:83px; 
+                            height:83px; 
+                        }
+                    }
+                    .red-hl{
+                        color:#A40E1B; 
+                    }
+                }
+            }
+            &.order{
+                .order-list{
+                    .order-item{
+                        @include clearfix();
+                        position:relative;
+                        padding-bottom:10px;
+                        border-bottom:1px solid #ddd;        
+                        margin-bottom:10px;
+                        .order-img{
+                            float:left;
+                            img{
+                                @include border-radius(3px);
+                                width:144px; 
+                                height:96px;
+                            }
+                        }
+                        .order-detail{
+                            float:left;
+                            margin-left:10px;
+                            ul{
+                                li{
+                                    font-size:18px;
+                                    height:32px;
+                                    line-height:32px;
+                                    color:#656565;
+                                    .price{
+                                        font-size:22px; 
+                                        color:#269335;
+                                    }
+                                    .num{
+                                        color:#999; 
+                                    }
+                                } 
+                            }
+                        }
+                        .more{
+                            text-decoration:none;
+                            color:#656565;
+                            font-size:20px;
+                            position:absolute;
+                            top:40%;
+                            right:5%;
+                            display:block; 
+                            width:12px;
+                            height:16px;
+                        }
+                    }
+                } 
+            }
+            &.addr{
+                h5{
+                    position:relative;
+                    margin:10px;
+                    padding-bottom:10px;
+                    font-size:22px; 
+                    font-weight:normal;
+                    color:#000;
+                    border-bottom:1px solid #ddd;
+                    .addaddr{
+                        width:30px;
+                        height:30px;
+                        line-height:20px;
+                        position:absolute;
+                        right:0;
+                        top:0;
+                        font-size:60px;
+                        color:#e3e3e3;
+                        text-decoration:none;
+                    }
+                }
+                ul{
+                    @include clearfix();
+                    li{
+                        color:#656565;
+                        margin:10px;
+                        padding-bottom:10px;
+                        border-bottom:1px solid #ddd;
+                        .editaddr{
+                        
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -657,13 +780,13 @@ body{
     display:none;
 }
 .go-deep{
- //   @include translate(0%,0);
+    //@include translate(0%,0);
 }
 .go-middle{
-  //  @include translate(0%,0);
+    //@include translate(0%,0);
 }
 .go-low{
-   // @include translate(0%,0);
+    //@include translate(0%,0);
 }
 .category{
     z-index:21;
@@ -674,4 +797,3 @@ body{
 .product{
     z-index:23;
 }
-
