@@ -23,42 +23,80 @@ var categorylist = [
         value:[
             {
                 list_id:'4',
-                name:'444444444'
+                name:'水果果篮'
             },   
             {
                 list_id:'5',
-                name:'5555555555'
+                name:'果蔬'
             },    
             {
                 list_id:'6',
-                name:'6666666666666'
+                name:'充值卡'
             }
         ]
     },
     {
         id:'3',
         title:'人群',
-        value:[]
+        value:[
+            {
+                list_id:'7',
+                name:'儿童'
+            },   
+            {
+                list_id:'8',
+                name:'孕妇'
+            }
+        ]
     },
     {
         id:'4',
         title:'场合',
-        value:[]
+        value:[
+            {
+                list_id:'9',
+                name:'生日'
+            },   
+            {
+                list_id:'10',
+                name:'结婚'
+            }
+        ]
     },
     {
         id:'5',
         title:'品牌',
-        value:[]
+        value:[
+            {
+                list_id:'11',
+                name:'进口'
+            }
+        ]
     },
     {
         id:'6',
         title:'原产地',
-        value:[]
+        value:[
+            
+            {
+                list_id:'13',
+                name:'美国'
+            },   
+            {
+                list_id:'14',
+                name:'新西兰'
+            }
+        ]
     },
     {
         id:'7',
         title:'限时抢购',
-        value:[]
+        value:[
+            {
+                list_id:'15',
+                name:'限时'
+            }
+        ]
     }
 ];
 

@@ -8,7 +8,13 @@ App.Router.map(function() {
     this.resource('category',{path:'category/:id'}); 
     this.resource('list',{path:'list/:id'}); 
 
-    this.resource('detail',{path:'detail/:id'});
+    this.resource('product',{path:'product/:id'});
+
+    this.resource('user',{path:'/user'},function(){
+        this.route('info'); 
+        this.route('order'); 
+        this.route('addr');
+    });
 });
 
 //index
@@ -32,13 +38,13 @@ App.CategoryRoute = Ember.Route.extend({
         return categorylist.findBy('id',params.id); 
     },
     renderTemplate:function(){
-        this.render('category',{ outlet:'category' }); 
+        this.render('category',{ outlet:'main' }); 
     },
     activate:function(){
-        $('.category').addClass('go-deep');
+        //$('.category').addClass('go-deep');
     },
     deactivate:function(){
-        $('.category').removeClass('go-deep');
+        //$('.category').removeClass('go-deep');
     }
 });
 
@@ -47,36 +53,41 @@ App.ListRoute = Ember.Route.extend({
         return listitems; 
     },
     renderTemplate:function(){
-        this.render('list',{ outlet:'list' }); 
+        this.render('list',{ outlet:'main' }); 
     },
     deactivate:function(){
-        $('.list').removeClass('go-middle');
+        //$('.list').removeClass('go-middle');
     },
     activate:function(){
-        $('.list').addClass('go-middle');
+        //$('.list').addClass('go-middle');
     }
 });
 
-App.DetailRoute = Ember.Route.extend({
+App.ProductRoute = Ember.Route.extend({
     model:function(params){
         return  []; 
     },
     renderTemplate:function(){
-        this.render('detail',{ outlet:'detail' }); 
+        this.render('product',{ outlet:'main' }); 
     },
     deactivate:function(){
-        $('.detial').removeClass('go-low');
+        //$('.product').removeClass('go-low');
     }
 });
 
 
 App.ListView = Ember.View.extend({
   didInsertElement: function() {
-      $('.list').addClass('go-middle');
+      //$('.list').addClass('go-middle');
   }
 });
 App.CategoryView = Ember.View.extend({
   didInsertElement: function() {
-      $('.category').addClass('go-deep');
+      //$('.category').addClass('go-deep');
+  }
+});
+App.ProductView = Ember.View.extend({
+  didInsertElement: function() {
+      //$('.product').addClass('go-low');
   }
 });
