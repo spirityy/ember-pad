@@ -275,6 +275,7 @@ body {
     line-height: 60px;
     margin: 0; }
   .search-form input[type="text"] {
+    background: url(../img/icons.png) no-repeat 10px -748px;
     padding: 10px 50px;
     width: 480px;
     font-size: 20px;

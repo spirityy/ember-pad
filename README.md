@@ -1,4 +1,5 @@
 ember-pad
 =========
 
-tt-pad
+基于emberjs的ipad应用
+
