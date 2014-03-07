@@ -12,7 +12,7 @@
             <div class="side-bar">
                 <div class="side-hd">
                         {{#link-to "user"}}
-                        <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
+                            <img src="http://static.cnbetacdn.com/newsimg/2014/0221/29_1j1Frbwsv.jpg" alt="">
                         {{/link-to}}
                 </div>
                 <div>
@@ -74,34 +74,35 @@
            <div class="nav">
                  <h3>天天果园<span class="addr-choose">上海<span class="triangle"></span></span></h3>
             </div>
-            <div class="loading">
+            <div class="loading hide">
             </div>
             <div class="nav-place">
             </div>
-            <div id="slider">
-                <div>
-                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
-                </div>
-                <div>
-                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
-                </div>
-                <div>
-                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
-                </div>
-                <div>
-                    <a href="#index"><img src="http://static.fruitday.com/images/2014-02-17/1392616538_pic.jpg"></a>
+            <div class="slider">
+                <div class="swiper-wrapper"> 
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0);"><img src="http://cdn.ifanr.cn/wp-content/uploads/2014/03/iphone-5s-fingerprint-scanner-1500x1000.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0);"><img src="http://cdn.ifanr.cn/wp-content/uploads/2014/03/iphone-5s-fingerprint-scanner-1500x1000.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0);"><img src="http://cdn.ifanr.cn/wp-content/uploads/2014/03/iphone-5s-fingerprint-scanner-1500x1000.jpg"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0);"><img src="http://cdn.ifanr.cn/wp-content/uploads/2014/03/iphone-5s-fingerprint-scanner-1500x1000.jpg"></a>
+                    </div>
                 </div>
             </div>
 
             <div class="banner-cat">
                 <ul>
-                    <li><a href="#">苹果</a></li>
-                    <li><a href="#">苹果</a></li>
-                    <li><a href="#">苹果</a></li>
-                    <li><a href="#">苹果</a></li>
+                    <li>{{#link-to "list" 1}}苹果{{/link-to}}</li>
+                    <li>{{#link-to "list" 1}}苹果{{/link-to}}</li>
+                    <li>{{#link-to "list" 1}}苹果{{/link-to}}</li>
+                    <li>{{#link-to "list" 1}}苹果{{/link-to}}</li>
                 </ul>
             </div>
-
 
         <div class="goods-list clearfix">
             <h3 class="list-hd"><a href="#">礼品推荐</a><a class="more" href="#">&gt;</a></h3>
@@ -131,6 +132,10 @@
                 </ul> 
             </div>
         </div>
+
+        <div class="choose-addr-wrapper">
+            地区选择
+        </div>
 </script>
 
 
@@ -142,8 +147,31 @@
     <div class="nav-place"></div>
     <div class="search-form">
             <input type="text" placeholder="在这里搜索" >
-            <button>搜索</button>
+            <button {{action "search"}}>搜索</button>
     </div>
+    <div class="list-wrapper goods-list">
+             <ul>
+             <li>
+                    <div class="pro-mod">
+                        <div class="pro-img">
+                            <img {{bind-attr src=img_src}} alt="">
+                        </div>
+                        <div class="pro-dec">
+                            <ul>
+                                <li class="pro-name">
+                                    {{title}}dsadasd
+                                </li>
+                                <li class="pro-price">
+                                &yen;{{price}}dsaddsa
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul> 
+    </div>
+
+
 </script>
 
 <!----------购物车页-------------->
@@ -165,8 +193,8 @@
                         <p>{{good_dec}}</p>
                     </div>
                     <div class="item-addremove">
-                        <a class="act-add">+</a> 
-                        <a class="act-remove">-</a>
+                        <a class="act-add" {{action "add"}}>+</a> 
+                        <a class="act-remove" {{action "remove"}}>-</a>
                     </div>
                     <div class="endprice">
                         <span class="num">{{good_num}}</span>X<span class="g-hl">&yen;{{good_price}}</span>
@@ -182,7 +210,7 @@
             &yen;1030
         </div>
         <div class="go-pay">
-            <button>结算</button>
+            <button {{action "gopay"}}>结算</button>
         </div>
     </div>
 </script>
@@ -391,12 +419,15 @@
     </div>
 </script>
 
-
 <script src="./js/libs/jquery-1.9.1.js"></script>
 <script src="./js/libs/handlebars-1.0.0.js"></script>
 <script src="./js/libs/ember.js"></script>
 <script src="./js/data.js"></script>
 <script src="./js/app.js"></script>
+
+<!--plugin-->
+<script src="./js/libs/idangerous.swiper.js"></script>
+<script src="./js/libs/jquery.popupoverlay.js"></script>
 
 </body>
 </html>

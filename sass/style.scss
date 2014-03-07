@@ -160,10 +160,22 @@ body{
         height:100px; 
         background:url(../img/loading.gif) no-repeat center bottom;
     }
-    #slider{
+    .slider{
         width:100%;
         height:186px;
         overflow:hidden;
+        .swiper-wrapper{
+            width:100%;
+             .swiper-slide{
+                float:left;
+                width:100%; 
+                img{
+                    width:100%; 
+                    height:186px; 
+                }
+            }
+    
+        }
     }
 }
 
@@ -769,8 +781,13 @@ body{
     }
 }
 
-
-
+////////////popup
+.choose-addr-wrapper{
+    background:#fff;
+    padding:10px;
+    width:50%;
+    height:200px;
+}
 
 
 .overlay{

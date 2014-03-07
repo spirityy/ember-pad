@@ -1,5 +1,7 @@
 App = Ember.Application.create({});
 
+//$('.side-bar').height($('.main-wrapper').height());
+
 App.Router.map(function() {
     this.route('index',{path:'/'});
     this.route('search',{path:'/search'});
@@ -29,9 +31,27 @@ App.IndexRoute  = Ember.Route.extend({
 App.CertRoute  = Ember.Route.extend({
     model:function(){
         return certlist; 
+    },
+    actions:{
+        add:function(){
+            alert('add');
+        },
+        remove:function(){
+            alert('remove'); 
+        },
+        gopay:function(){
+            alert('是否确认付款');
+        }
     }
 });
 
+App.SearchRoute  = Ember.Route.extend({
+    actions:{
+        search:function(){
+            alert('search'); 
+        } 
+    }
+});
 
 App.CategoryRoute = Ember.Route.extend({
     model:function(params){
@@ -69,13 +89,29 @@ App.ProductRoute = Ember.Route.extend({
     },
     renderTemplate:function(){
         this.render('product',{ outlet:'main' }); 
-    },
-    deactivate:function(){
-        //$('.product').removeClass('go-low');
     }
 });
 
+App.IndexView = Ember.View.extend({
+  didInsertElement: function(){
 
+        var mySwiper = new Swiper('.slider',{
+            loop:true,
+            grabCursor: true,
+            paginationClickable: true
+        });
+
+        var p = $('.choose-addr-wrapper').popup({
+            transition: 'all 0.3s'
+        });
+
+        $('.addr-choose').click(function(){
+            p.popup('show');
+        });
+    }
+});
+
+/*
 App.ListView = Ember.View.extend({
   didInsertElement: function() {
       //$('.list').addClass('go-middle');
@@ -91,3 +127,5 @@ App.ProductView = Ember.View.extend({
       //$('.product').addClass('go-low');
   }
 });
+*/
+
