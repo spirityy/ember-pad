@@ -1,2 +1,3 @@
-.sass-cache
+.git/*
+.sass-cache/*
 .DS_Store
